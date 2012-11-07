@@ -1,0 +1,30 @@
+rfooConsoleUtil
+===============
+
+Example usage:
+
+1. In application start-up:
+
+    import rfooConsoleUtil
+    rfooConsoleUtil.spawnServer()
+
+2. To debug:
+    
+    python -c "import rfooConsoleUtil; rfooConsoleUtil.connect(port[, host])"
+
+    >>> q = getFrame()
+    >>> q
+    Frame 1
+    ...Stack trace...
+    >>> q.locals()
+    {'prompt': '...',
+        'self': <IPython.frontend...>}
+    >>> q['self']
+    <IPython.frontend...>
+    >>> q.up()
+    Frame 2
+    ...Stack trace...
+    >>> q.down()
+    Frame 1
+    ...Stack trace...
+
